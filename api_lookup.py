@@ -1,6 +1,7 @@
 import requests
 from models import Vehicle
 from bs4 import BeautifulSoup
+import api_keys
 
 # Function is referenced in main.py
 # Requires a single vin number to make
@@ -9,7 +10,9 @@ from bs4 import BeautifulSoup
 def findVehicleValue(lookupVin):
 
     # Don't Forget To Replace This With Your Own API Key
-    api_key = "YOUR_VINAUDIT_API_KEY"
+    # You will need to add a api key file to reference this, or
+    # paste it in as a string at your own risk.
+    api_key = api_keys.key
 
     # VinAudit lets you specify a milage as well, you could easily
     # add an additional spreadsheet field and pull specific values

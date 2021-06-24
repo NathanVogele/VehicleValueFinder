@@ -36,7 +36,7 @@ customers = pd.read_excel(excel_file)
 vehicle_vins = customers['Vehicle VIN'].tolist()
 
 # We clean the list from any spaces to prevent errorrs with the API
-cleaned_vehicle_vins = [x.replace(' ','') for x in vehicle_vins]
+cleaned_vehicle_vins = [x.replace(' ', '') for x in vehicle_vins]
 print(cleaned_vehicle_vins)
 
 # Use API to pull vehicle average value
