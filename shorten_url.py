@@ -20,6 +20,8 @@ def shorten_url_bitly(url, tags, campaign):
     }
 
     # Formats the Post Request -- BELOW IS THE DEFAULT PROVIDED BY BitLy
+
+    # Your GROUP_GUID is required. Use this call to find your own.  GET https://api-ssl.bitly.com/v4/groups.
     # data = '{ "long_url": "https://dev.bitly.com", "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" }'
 
     data = '{ "long_url": "' + url + '", "domain": "bit.ly", "group_guid": "Bk7ofsao0js" }'
