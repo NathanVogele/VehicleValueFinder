@@ -12,6 +12,8 @@
 from models import Vehicle
 import pandas as pd
 import api_lookup
+import excel_import
+import excel_export
 import os
 
 # This is the place you are going to link your xlsx file to. 
@@ -24,7 +26,9 @@ import os
 # and running that before you actually run the full list. 
 # this will save you a lot of money on API calls. 
 
-excel_file = "C:/ExampleUser/Desktop/Vin_Builder.xlsx"
+# Please add vins to the excel import folder, that'll process them here.
+
+excel_file = "excel_import/Vin_Builder.xlsx"
 
 # Opens the spreadsheet as a dataframe. This program
 # is setup to take a one sheet file, with only a vin number.
@@ -76,4 +80,4 @@ customers.insert(0,"Vehicle Value", vehicle_values,allow_duplicates = False)
 # gives you a preview of what the file looks like before it writes.
 print(customers.head())
 
-customers.to_excel("output.xlsx") # exporting file sheet.
+customers.to_excel("excel_export/output.xlsx") # exporting file sheet.
